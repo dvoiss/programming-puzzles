@@ -2,7 +2,7 @@
 # Algorithms: Design and Analysis - Part 1
 
 # merge-sort:
-# modifies original lists
+# does not modify original list
 
 # Example:
 # unsorted_list = [ 11, 3, 2, 1, 8, 7, 4, 3, 8, 34, 21 ]

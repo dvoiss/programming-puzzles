@@ -17,6 +17,7 @@ print ""
 print "1. Reverse a string"
 print reverse_string(test, len(test)) # => 'gnirts-tset'
 
+
 # compute Nth fibonacci number
 def fibonacci(n):
 	a, b = 0, 1
@@ -33,6 +34,7 @@ print fibonacci(5)  # => 3
 print fibonacci(8)  # => 13
 print fibonacci(9)  # => 21
 
+
 # multiplication tables
 def print_table(n):
 	format_string = " ".join(['{' + str(i) + ':<3}' for i in range(0, n)])
@@ -47,6 +49,7 @@ print ""
 print "3. Print multiplication table %s x %s" % (test, test)
 print_table(test)
 
+
 # assumes the file has one integer per line and no blank lines / errors
 def sum_integers_line_by_line(file_path):
 	return sum( map( lambda x: int(x), open(file_path).readlines() ) )
@@ -55,12 +58,14 @@ print ""
 print "4. Sum up integers in a file"
 print sum_integers_line_by_line('input/integers.txt')
 
+
 def odds(start, end):
 	return " ".join([ str(i) for i in range(start, end + 1) if i % 2 == 1 ])
 
 print ""
 print "5. Print the odd numbers from 1 to 99"
 print odds(1, 99)
+
 
 # find the largest int in an array (not using max function)
 def find_largest(list):
@@ -77,6 +82,7 @@ print ""
 print "6. Find the largest int in an array"
 print "Test values: %s" % test
 print find_largest(test)
+
 
 # format an RGB value as a 6-digit hexadecimal string
 def hex_string(values):
