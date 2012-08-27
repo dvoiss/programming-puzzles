@@ -1,3 +1,7 @@
+# Challenge: http://www.reddit.com/r/dailyprogrammer/comments/y5sox/8132012_challenge_88_easy_vigen%C3%A8re_cipher/
+# Solution: http://www.reddit.com/r/dailyprogrammer/comments/y5sox/8132012_challenge_88_easy_vigen%C3%A8re_cipher/c5socop
+# by @dvoiss on github / @daveasaurus on reddit
+
 from string import ascii_uppercase as up
 
 def encode(text, cipher, decode=False):
@@ -7,11 +11,10 @@ def encode(text, cipher, decode=False):
 		cipher_index += 1
 	return result
 
-	return ''.join([up[(up.index(x) + (decode * up.index(cipher[ ci % len(cipher) ]))) % 26] for ci in range(max(len(cipher), len(text))) for i, x in enumerate(text)])
-
 print encode("THECAKEISALIE", "GLADOS", False)
 print encode("ZSEFOCKTSDZAK", "GLADOS", True)
 
-HSULAREFOTXNMYNJOUZWYILGPRYZQVBBZABLBWHMFGWFVPMYWAVVTYISCIZRLVGOPGBRAKLUGJUZGLNBASTUQAGAVDZIGZFFWVLZSAZRGPVXUCUZBYLRXZSAZRYIHMIMTOJBZFZDEYMFPMAGSMUGBHUVYTSABBAISKXVUCAQABLDETIFGICRVWEWHSWECBVJMQGPRIBYYMBSAPOFRIMOLBUXFIIMAGCEOFWOXHAKUZISYMAHUOKSWOVGBULIBPICYNBBXJXSIXRANNBTVGSNKR
+# HSULAREFOTXNMYNJOUZWYILGPRYZQVBBZABLBWHMFGWFVPMYWAVVTYISCIZRLVGOPGBRAKLUGJUZGLNBASTUQAGAVDZIGZFFWVLZSAZRGPVXUCUZBYLRXZSAZRYIHMIMTOJBZFZDEYMFPMAGSMUGBHUVYTSABBAISKXVUCAQABLDETIFGICRVWEWHSWECBVJMQGPRIBYYMBSAPOFRIMOLBUXFIIMAGCEOFWOXHAKUZISYMAHUOKSWOVGBULIBPICYNBBXJXSIXRANNBTVGSNKR
 
-	''.join([up[(up.index(x) + (up.index(cipher[ i % len(cipher) ]))) % 26] for i, x in enumerate(text)])
+# one-liner:
+''.join([up[(up.index(x) + (up.index(cipher[ i % len(cipher) ]))) % 26] for i, x in enumerate(text)])
